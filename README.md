@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="UtazzMeccsre — szervezett meccses túrák Európa legjobb stadionjaiba. Repjegy, szállás és meccsjegy egy csomagban." />
-    <title>UtazzMeccsre – TOP meccses túrák</title>
+    <title>Utazz Meccsre – TOP meccses túrák</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -24,7 +24,7 @@
         class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
       >
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
-          UtazzMeccsre
+          Utazz Meccsre
         </h1>
         <p class="text-xl text-gray-200 mb-6 text-center max-w-2xl">
           Éld át a stadionok hangulatát – szervezett meccses túrák Európa
