@@ -18,167 +18,71 @@
   <body class="bg-gray-50 text-gray-900">
     <!-- Navigáció -->
     <header class="bg-white shadow-md w-full">
-      <div
-        class="container mx-auto flex items-center justify-between px-6 py-4"
-      >
+      <div class="container mx-auto flex items-center justify-between px-6 py-4">
         <h1 class="text-2xl font-bold text-red-600">
-          <a href="utazzmeccsre.html">UtazzMeccsre</a>
+          <a href="index.html">UtazzMeccsre</a>
         </h1>
 
         <nav class="space-x-6 hidden md:block">
-          <a
-            href="utazzmeccsre.html"
-            class="text-gray-700 hover:text-red-600 font-medium transition"
-            >Főoldal</a
-          >
-          <a
-            href="turak.html"
-            class="text-gray-700 hover:text-red-600 font-medium transition"
-            >Túrák</a
-          >
-          <a
-            href="utazzmeccsre.html#contact"
-            class="text-gray-700 hover:text-red-600 font-medium transition"
-            >Kapcsolat</a
-          >
+          <a href="index.html" class="text-gray-700 hover:text-red-600 font-medium transition">Főoldal</a>
+          <a href="turak.html" class="text-gray-700 hover:text-red-600 font-medium transition">Túrák</a>
+          <a href="index.html#contact" class="text-gray-700 hover:text-red-600 font-medium transition">Kapcsolat</a>
         </nav>
 
-        <button
-          onclick="toggleMenu()"
-          class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-7 w-7"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+        <button onclick="toggleMenu()" class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
 
-      <nav
-        id="mobile-menu"
-        class="hidden bg-white border-t border-gray-200 shadow-md md:hidden"
-      >
+      <nav id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-md md:hidden">
         <div class="flex flex-col items-center space-y-3 py-4">
-          <a
-            href="utazzmeccsre.html"
-            onclick="toggleMenu()"
-            class="text-gray-700 hover:text-red-600 font-medium"
-            >Főoldal</a
-          >
-          <a
-            href="turak.html"
-            onclick="toggleMenu()"
-            class="text-gray-700 hover:text-red-600 font-medium"
-            >Túrák</a
-          >
-          <a
-            href="utazzmeccsre.html#contact"
-            onclick="toggleMenu()"
-            class="text-gray-700 hover:text-red-600 font-medium"
-            >Kapcsolat</a
-          >
+          <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Főoldal</a>
+          <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Túrák</a>
+          <a href="index.html#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Kapcsolat</a>
         </div>
       </nav>
     </header>
 
     <!-- Vissza a főoldalra gomb -->
     <div class="container mx-auto px-6 md:px-20 py-6">
-      <a
-        href="utazzmeccsre.html"
-        class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300"
-      >
+      <a href="index.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
         ← Vissza a főoldalra
       </a>
     </div>
 
     <!-- Túrák oldal tartalom -->
     <section class="py-6 px-6 md:px-20">
-      <h1 class="text-4xl font-extrabold text-center mb-10">
-        Válassz országot
-      </h1>
+      <h1 class="text-4xl font-extrabold text-center mb-10">Válassz országot</h1>
       <div class="grid md:grid-cols-3 gap-10">
         <!-- Olaszország -->
-        <a
-          href="olaszorszag.html"
-          class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden"
-        >
-          <div
-            class="absolute inset-0 bg-center bg-no-repeat opacity-20"
-            style="
-              background-image: url('https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg');
-              background-size: contain;
-            "
-          ></div>
+        <a href="olaszorszag.html" class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden">
+          <div class="absolute inset-0 bg-center bg-no-repeat opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg'); background-size: contain;"></div>
           <h2 class="relative text-2xl font-semibold mb-2">Olaszország</h2>
         </a>
 
         <!-- Spanyolország -->
-        <a
-          href="spania.html"
-          class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden"
-        >
-          <div
-            class="absolute inset-0 bg-center bg-no-repeat opacity-20"
-            style="
-              background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg');
-              background-size: contain;
-            "
-          ></div>
+        <a href="spania.html" class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden">
+          <div class="absolute inset-0 bg-center bg-no-repeat opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg'); background-size: contain;"></div>
           <h2 class="relative text-2xl font-semibold mb-2">Spanyolország</h2>
         </a>
 
         <!-- Anglia -->
-        <a
-          href="anglia.html"
-          class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden"
-        >
-          <div
-            class="absolute inset-0 bg-center bg-no-repeat opacity-20"
-            style="
-              background-image: url('https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg');
-              background-size: contain;
-            "
-          ></div>
+        <a href="anglia.html" class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden">
+          <div class="absolute inset-0 bg-center bg-no-repeat opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg'); background-size: contain;"></div>
           <h2 class="relative text-2xl font-semibold mb-2">Anglia</h2>
         </a>
 
         <!-- Németország -->
-        <a
-          href="nemetorszag.html"
-          class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden"
-        >
-          <div
-            class="absolute inset-0 bg-center bg-no-repeat opacity-20"
-            style="
-              background-image: url('https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg');
-              background-size: contain;
-            "
-          ></div>
+        <a href="nemetorszag.html" class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden">
+          <div class="absolute inset-0 bg-center bg-no-repeat opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg'); background-size: contain;"></div>
           <h2 class="relative text-2xl font-semibold mb-2">Németország</h2>
         </a>
 
         <!-- Franciaország -->
-        <a
-          href="francia.html"
-          class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden"
-        >
-          <div
-            class="absolute inset-0 bg-center bg-no-repeat opacity-20"
-            style="
-              background-image: url('https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg');
-              background-size: contain;
-            "
-          ></div>
+        <a href="francia.html" class="relative bg-white shadow-lg rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl transition overflow-hidden">
+          <div class="absolute inset-0 bg-center bg-no-repeat opacity-20" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg'); background-size: contain;"></div>
           <h2 class="relative text-2xl font-semibold mb-2">Franciaország</h2>
         </a>
       </div>
@@ -189,11 +93,7 @@
       <p class="text-sm mb-2">© 2025 UtazzMeccsre – Minden jog fenntartva.</p>
       <p class="text-sm">
         Ha kérdésed van, írj nekünk:
-        <a
-          href="mailto:utazzmeccsre@gmail.com"
-          class="text-red-600 hover:underline"
-          >utazzmeccsre@gmail.com</a
-        >
+        <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">utazzmeccsre@gmail.com</a>
       </p>
     </footer>
   </body>
