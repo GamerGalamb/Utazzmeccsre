@@ -173,7 +173,10 @@
             <p class="text-gray-600 font-medium mb-1">
               Repjegy + Szállás + Meccsjegy
             </p>
-            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="75000">
+            <p
+              class="price text-2xl font-bold text-green-600 mb-4"
+              data-huf="75000"
+            >
               75 000 Ft
             </p>
             <a
@@ -200,7 +203,10 @@
             <p class="text-gray-600 font-medium mb-1">
               Repjegy + Szállás + Meccsjegy
             </p>
-            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="85000">
+            <p
+              class="price text-2xl font-bold text-green-600 mb-4"
+              data-huf="85000"
+            >
               85 000 Ft
             </p>
             <a
@@ -227,7 +233,10 @@
             <p class="text-gray-600 font-medium mb-1">
               Repjegy + Szállás + Meccsjegy
             </p>
-            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="90000">
+            <p
+              class="price text-2xl font-bold text-green-600 mb-4"
+              data-huf="90000"
+            >
               90 000 Ft
             </p>
             <a
@@ -256,7 +265,7 @@
       </p>
     </footer>
 
-    <!-- 💶 Árfolyamváltó script -->
+    <!-- 💶 Árfolyamváltó script (megjegyzéssel) -->
     <script>
       const eurRate = 390; // 1 EUR ≈ 390 HUF
       const selectorDesktop = document.getElementById("currencySelector");
@@ -273,20 +282,29 @@
             price.textContent = `${huf.toLocaleString()} Ft`;
           }
         });
+
+        // 💾 Mentés a böngészőbe
+        localStorage.setItem("selectedCurrency", currency);
       }
 
+      // 💡 Ha a felhasználó vált
       selectorDesktop.addEventListener("change", (e) => {
-        selectorMobile.value = e.target.value;
-        updatePrices(e.target.value);
+        const currency = e.target.value;
+        selectorMobile.value = currency;
+        updatePrices(currency);
       });
 
       selectorMobile.addEventListener("change", (e) => {
-        selectorDesktop.value = e.target.value;
-        updatePrices(e.target.value);
+        const currency = e.target.value;
+        selectorDesktop.value = currency;
+        updatePrices(currency);
       });
 
-      // Betöltéskor alapértelmezett
-      updatePrices("HUF");
+      // 🔁 Betöltéskor visszaolvassa a korábbi beállítást
+      const savedCurrency = localStorage.getItem("selectedCurrency") || "HUF";
+      selectorDesktop.value = savedCurrency;
+      selectorMobile.value = savedCurrency;
+      updatePrices(savedCurrency);
     </script>
   </body>
 </html>
