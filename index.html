@@ -27,7 +27,7 @@
         </h1>
 
         <!-- Asztali menü -->
-        <nav class="space-x-6 hidden md:block">
+        <nav class="space-x-6 hidden md:flex items-center">
           <a
             href="index.html"
             class="text-gray-700 hover:text-red-600 font-medium transition"
@@ -48,6 +48,15 @@
             class="text-gray-700 hover:text-red-600 font-medium transition"
             >Kapcsolat</a
           >
+
+          <!-- 💶 Pénznemváltó -->
+          <select
+            id="currencySelector"
+            class="border border-gray-300 rounded-md px-2 py-1 font-semibold text-gray-700 hover:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+          >
+            <option value="HUF" selected>HUF</option>
+            <option value="EUR">EUR</option>
+          </select>
         </nav>
 
         <!-- Hamburger ikon (mobilon) -->
@@ -102,6 +111,15 @@
             class="text-gray-700 hover:text-red-600 font-medium"
             >Kapcsolat</a
           >
+
+          <!-- Mobil pénznemváltó -->
+          <select
+            id="currencySelectorMobile"
+            class="border border-gray-300 rounded-md px-2 py-1 font-semibold text-gray-700 hover:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+          >
+            <option value="HUF" selected>HUF</option>
+            <option value="EUR">EUR</option>
+          </select>
         </div>
       </nav>
     </header>
@@ -155,7 +173,9 @@
             <p class="text-gray-600 font-medium mb-1">
               Repjegy + Szállás + Meccsjegy
             </p>
-            <p class="text-2xl font-bold text-green-600 mb-4">75 000 Ft</p>
+            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="75000">
+              75 000 Ft
+            </p>
             <a
               href="https://forms.gle/UffjJb1JqkjPdr7r8"
               target="_blank"
@@ -180,7 +200,9 @@
             <p class="text-gray-600 font-medium mb-1">
               Repjegy + Szállás + Meccsjegy
             </p>
-            <p class="text-2xl font-bold text-green-600 mb-4">85 000 Ft</p>
+            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="85000">
+              85 000 Ft
+            </p>
             <a
               href="https://forms.gle/UffjJb1JqkjPdr7r8"
               target="_blank"
@@ -205,7 +227,9 @@
             <p class="text-gray-600 font-medium mb-1">
               Repjegy + Szállás + Meccsjegy
             </p>
-            <p class="text-2xl font-bold text-green-600 mb-4">90 000 Ft</p>
+            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="90000">
+              90 000 Ft
+            </p>
             <a
               href="https://forms.gle/UffjJb1JqkjPdr7r8"
               target="_blank"
@@ -214,62 +238,6 @@
               Ajánlatkérés
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Miért válassz minket? -->
-    <section id="why-us" class="py-16 px-6 md:px-20 bg-gray-50">
-      <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-12">
-        Miért válassz minket?
-      </h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div
-          class="bg-white shadow-lg rounded-2xl p-8 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="mx-auto h-16 w-16 text-red-600 mb-4 transform transition duration-300 hover:-translate-y-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 17v-4h6v4m-6 0v2h6v-2m-6 0H6a2 2 0 01-2-2V9a2 2 0 012-2h12a2 2 0 012 2v6a2 2 0 01-2 2h-3"
-            />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-2">Teljes körű csomagok</h3>
-          <p class="text-gray-600">
-            Repülőjegy, szállás és meccsjegy egy csomagban – kényelmes és
-            stresszmentes utazás!
-          </p>
-        </div>
-
-        <div
-          class="bg-white shadow-lg rounded-2xl p-8 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="mx-auto h-16 w-16 text-red-600 mb-4 transform transition duration-300 hover:-translate-y-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 8v4l3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-2">Rugalmas ajánlatkérés</h3>
-          <p class="text-gray-600">
-            Egyedi igényekhez igazított csomagok, gyors visszajelzés és
-            személyre szabott ajánlatok.
-          </p>
         </div>
       </div>
     </section>
@@ -287,5 +255,38 @@
         </a>
       </p>
     </footer>
+
+    <!-- 💶 Árfolyamváltó script -->
+    <script>
+      const eurRate = 390; // 1 EUR ≈ 390 HUF
+      const selectorDesktop = document.getElementById("currencySelector");
+      const selectorMobile = document.getElementById("currencySelectorMobile");
+      const prices = document.querySelectorAll(".price");
+
+      function updatePrices(currency) {
+        prices.forEach((price) => {
+          const huf = parseInt(price.dataset.huf);
+          if (currency === "EUR") {
+            const eur = (huf / eurRate).toFixed(2);
+            price.textContent = `${eur} €`;
+          } else {
+            price.textContent = `${huf.toLocaleString()} Ft`;
+          }
+        });
+      }
+
+      selectorDesktop.addEventListener("change", (e) => {
+        selectorMobile.value = e.target.value;
+        updatePrices(e.target.value);
+      });
+
+      selectorMobile.addEventListener("change", (e) => {
+        selectorDesktop.value = e.target.value;
+        updatePrices(e.target.value);
+      });
+
+      // Betöltéskor alapértelmezett
+      updatePrices("HUF");
+    </script>
   </body>
 </html>
