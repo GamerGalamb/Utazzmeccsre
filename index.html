@@ -54,7 +54,7 @@
           </select>
         </nav>
 
-        <!-- Hamburger ikon (mobilon) -->
+        <!-- Hamburger ikon -->
         <button
           onclick="toggleMenu()"
           class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition"
@@ -82,27 +82,10 @@
         class="hidden bg-white border-t border-gray-200 shadow-md md:hidden"
       >
         <div class="flex flex-col items-center space-y-3 py-4">
-          <a
-            href="index.html"
-            onclick="toggleMenu()"
-            class="text-gray-700 hover:text-red-600 font-medium"
-            >Főoldal</a
-          >
-          <a
-            href="turak.html"
-            onclick="toggleMenu()"
-            class="text-gray-700 hover:text-red-600 font-medium"
-            >Túrák</a>
-          <a
-            href="#why-us"
-            onclick="toggleMenu()"
-            class="text-gray-700 hover:text-red-600 font-medium"
-            >Miért minket?</a>
-          <a
-            href="#contact"
-            onclick="toggleMenu()"
-            class="text-gray-700 hover:text-red-600 font-medium"
-            >Kapcsolat</a>
+          <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Főoldal</a>
+          <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Túrák</a>
+          <a href="#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Miért minket?</a>
+          <a href="#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Kapcsolat</a>
 
           <select
             id="currencySelectorMobile"
@@ -130,8 +113,7 @@
           UtazzMeccsre
         </h1>
         <p class="text-xl text-gray-200 mb-6 max-w-2xl">
-          Éld át a stadionok hangulatát – szervezett meccses túrák Európa
-          legnagyobb városaiba!
+          Éld át a stadionok hangulatát – szervezett meccses túrák Európa legnagyobb városaiba!
         </p>
         <a
           href="https://forms.gle/UffjJb1JqkjPdr7r8"
@@ -150,6 +132,7 @@
       </h2>
 
       <div class="grid md:grid-cols-3 gap-10">
+        
         <!-- Milánó -->
         <div class="bg-white shadow-lg rounded-2xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
           <img
@@ -159,22 +142,9 @@
           />
           <div class="p-6 text-center">
             <h3 class="text-2xl font-semibold mb-2">Milánó</h3>
-            <p class="text-gray-600 font-medium mb-1">
-              Repjegy + Szállás + Meccsjegy
-            </p>
-            <p
-              class="price text-2xl font-bold text-green-600 mb-4"
-              data-huf="75000"
-            >
-              75 000 Ft
-            </p>
-            <a
-              href="https://forms.gle/UffjJb1JqkjPdr7r8"
-              target="_blank"
-              class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300"
-            >
-              Ajánlatkérés
-            </a>
+            <p class="text-gray-600 font-medium mb-1">Repjegy + Szállás + Meccsjegy</p>
+            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="75000">75 000 Ft</p>
+            <a href="https://forms.gle/UffjJb1JqkjPdr7r8" target="_blank" class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">Ajánlatkérés</a>
           </div>
         </div>
 
@@ -187,52 +157,27 @@
           />
           <div class="p-6 text-center">
             <h3 class="text-2xl font-semibold mb-2">Róma</h3>
-            <p class="text-gray-600 font-medium mb-1">
-              Repjegy + Szállás + Meccsjegy
-            </p>
-            <p
-              class="price text-2xl font-bold text-green-600 mb-4"
-              data-huf="85000"
-            >
-              85 000 Ft
-            </p>
-            <a
-              href="https://forms.gle/UffjJb1JqkjPdr7r8"
-              target="_blank"
-              class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300"
-            >
-              Ajánlatkérés
-            </a>
+            <p class="text-gray-600 font-medium mb-1">Repjegy + Szállás + Meccsjegy</p>
+            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="85000">85 000 Ft</p>
+            <a href="https://forms.gle/UffjJb1JqkjPdr7r8" target="_blank" class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">Ajánlatkérés</a>
           </div>
         </div>
 
-        <!-- Madrid -->
+        <!-- Madrid (Kép frissítve) -->
         <div class="bg-white shadow-lg rounded-2xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
           <img
-            src="https://en.nogomania.com/GetFile.ashx?id=276297"
-            alt="Madrid"
+            src="https://external-preview.redd.it/real-madrids-newly-renovated-santiago-bernabeus-atmosphere-v0-NnBudTdrODdzNndjMdkd0DbjDzhiieK-5_dOPLPACvB6Q4cLr2aCIASyOHTA.png?format=pjpg&auto=webp&s=e2aee5ce507cb4b1cb99b512ba4ee06889d8ecc0"
+            alt="Madrid stadion"
             class="w-full h-56 object-cover"
           />
           <div class="p-6 text-center">
             <h3 class="text-2xl font-semibold mb-2">Madrid</h3>
-            <p class="text-gray-600 font-medium mb-1">
-              Repjegy + Szállás + Meccsjegy
-            </p>
-            <p
-              class="price text-2xl font-bold text-green-600 mb-4"
-              data-huf="90000"
-            >
-              90 000 Ft
-            </p>
-            <a
-              href="https://forms.gle/UffjJb1JqkjPdr7r8"
-              target="_blank"
-              class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300"
-            >
-              Ajánlatkérés
-            </a>
+            <p class="text-gray-600 font-medium mb-1">Repjegy + Szállás + Meccsjegy</p>
+            <p class="price text-2xl font-bold text-green-600 mb-4" data-huf="90000">90 000 Ft</p>
+            <a href="https://forms.gle/UffjJb1JqkjPdr7r8" target="_blank" class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">Ajánlatkérés</a>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -243,28 +188,22 @@
       </h2>
 
       <div class="grid md:grid-cols-2 gap-10">
-        <!-- Teljes körű csomagok -->
         <div class="bg-white shadow-lg rounded-2xl p-8 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-16 w-16 text-red-600 mb-4 transform transition duration-300 hover:-translate-y-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M9 17v-4h6v4m-6 0v2h6v-2m-6 0H6a2 2 0 01-2-2V9a2 2 0 012-2h12a2 2 0 012 2v6a2 2 0 01-2 2h-3" />
           </svg>
           <h3 class="text-2xl font-semibold mb-2">Teljes körű csomagok</h3>
-          <p class="text-gray-600">
-            Repülőjegy, szállás és meccsjegy egy csomagban – kényelmes és stresszmentes utazás!
-          </p>
+          <p class="text-gray-600">Repülőjegy, szállás és meccsjegy egy csomagban – kényelmes és stresszmentes utazás!</p>
         </div>
 
-        <!-- Rugalmas ajánlatkérés -->
         <div class="bg-white shadow-lg rounded-2xl p-8 text-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-16 w-16 text-red-600 mb-4 transform transition duration-300 hover:-translate-y-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M12 8v4l3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <h3 class="text-2xl font-semibold mb-2">Rugalmas ajánlatkérés</h3>
-          <p class="text-gray-600">
-            Egyedi igényekhez igazított csomagok, gyors visszajelzés és személyre szabott ajánlatok.
-          </p>
+          <p class="text-gray-600">Egyedi igényekhez igazított csomagok, gyors visszajelzés és személyre szabott ajánlatok.</p>
         </div>
       </div>
     </section>
@@ -274,16 +213,11 @@
       <p class="text-sm mb-2">© 2025 UtazzMeccsre – Minden jog fenntartva.</p>
       <p class="text-sm">
         Ha kérdésed van, írj nekünk:
-        <a
-          href="mailto:utazzmeccsre@gmail.com"
-          class="text-red-600 hover:underline"
-        >
-          utazzmeccsre@gmail.com
-        </a>
+        <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">utazzmeccsre@gmail.com</a>
       </p>
     </footer>
 
-    <!-- Árfolyamváltó script -->
+    <!-- Árfolyam váltó script -->
     <script>
       const eurRate = 390;
       const selectorDesktop = document.getElementById("currencySelector");
