@@ -228,17 +228,16 @@
       const prices = document.querySelectorAll(".price");
 
       function updatePrices(currency) {
-        prices.forEach((price) => {
-          const huf = parseInt(price.dataset.huf);
-          if (currency === "EUR") {
-            const eur = (huf / eurRate).toFixed(2);
-            price.textContent = `${eur} €`;
-          } else {
-            price.textContent = `${huf.toLocaleString()} Ft`;
-          }
-        });
-        localStorage.setItem("selectedCurrency", currency);
-      }
+  prices.forEach((price) => {
+    const huf = parseInt(price.dataset.huf);
+    if (currency === "EUR") {
+      const eur = Math.round(huf / eurRate);   // <<< EUR kerekítve
+      price.textContent = `${eur} €`;
+    } else {
+      price.textContent = `${huf.toLocaleString()} Ft`;
+    }
+  });
+  localStorage.setItem("selectedCurrency", currency);
 
       selectorDesktop.addEventListener("change", (e) => {
         const currency = e.target.value;
@@ -259,5 +258,6 @@
     </script>
   </body>
 </html>
+
 
 
