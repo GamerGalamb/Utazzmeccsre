@@ -1,101 +1,228 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <title>ÁSZF – UtazzMeccsre</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: system-ui, sans-serif; margin:0; background:#f5f5f5; }
-    .container { max-width:900px; margin:0 auto; padding:2rem 1rem; background:#fff; }
-    h1 { font-size:2rem; margin-bottom:1rem; }
-    h2 { border-bottom:1px solid #ddd; padding-bottom:0.3rem; margin-top:2rem; }
-    h3 { margin-top:1.2rem; }
-    ul { margin-left:1.2rem; }
-    footer {
-      background:#111; color:#eee; text-align:center;
-      padding:2rem 1rem; margin-top:3rem;
-    }
-    footer a { color:#4da3ff; text-decoration:none; }
-    .footer-links a { color:#ddd; margin:0 10px; font-size:0.9rem; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UtazzMeccsre – ÁSZF</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navigációs sáv csak logóval -->
+    <header class="bg-white shadow-md w-full">
+      <div class="container mx-auto flex items-center justify-between px-6 py-4">
+        <a href="index.html" class="flex items-center">
+          <img
+            src="utazzmeccsre-logo.png"
+            alt="UtazzMeccsre logó"
+            class="h-16 w-auto"
+          />
+        </a>
+      </div>
+    </header>
 
-<div class="container">
-  <h1>Általános Szerződési Feltételek (ÁSZF)</h1>
-  <p><strong>UtazzMeccsre – Szervezett futballtúrák</strong></p>
+    <!-- Tartalom -->
+    <main class="container mx-auto px-6 py-10 max-w-4xl">
+      <div class="bg-white shadow-lg rounded-2xl p-8">
+        <h1 class="text-3xl font-bold mb-4 text-gray-800">
+          Általános Szerződési Feltételek (ÁSZF)
+        </h1>
+        <p class="text-sm text-gray-500 mb-6">
+          UtazzMeccsre – Szervezett futballtúrák
+        </p>
 
-  <h2>1. A Szolgáltató adatai</h2>
-  <p><strong>Szolgáltató neve:</strong> UtazzMeccsre</p>
-  <p><strong>Székhely:</strong> Szlovákia, 932 01, Veľký Meder, Kúpelná 18</p>
-  <p><strong>E-mail:</strong> utazzmeccsre@gmail.com</p>
+        <section class="space-y-6 text-gray-800 text-sm md:text-base">
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              1. A Szolgáltató adatai
+            </h2>
+            <p><strong>Szolgáltató neve:</strong> UtazzMeccsre</p>
+            <p><strong>Székhely:</strong> Szlovákia, 932 01, Veľký Meder, Kúpelná 18</p>
+            <p>
+              <strong>E-mail:</strong>
+              <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
+                utazzmeccsre@gmail.com
+              </a>
+            </p>
+          </div>
 
-  <h2>2. A szolgáltatás jellege</h2>
-  <p>A Szolgáltató futballmérkőzésekre szervezett utazási csomagokat kínál...</p>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              2. A szolgáltatás jellege
+            </h2>
+            <p>
+              A Szolgáltató futballmérkőzésekre szervezett utazási csomagokat kínál,
+              amelyek tartalmazhatnak repülőjegyet, szállást és mérkőzésbelépőt.
+            </p>
+            <p>
+              A weboldalon megjelenő árak tájékoztató jellegűek. A végleges ár minden
+              esetben e-mailben megküldött, személyre szabott ajánlat alapján kerül
+              meghatározásra.
+            </p>
+          </div>
 
-  <h2>3. Foglalás menete</h2>
-  <ul>
-    <li>Ajánlatkérés küldése</li>
-    <li>24–72 órán belül ajánlatküldés</li>
-    <li>Elfogadás e-mailben</li>
-    <li>Díj beérkezése → foglalás érvényes</li>
-  </ul>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              3. Foglalás menete
+            </h2>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Az Ügyfél ajánlatkérést küld a weboldalon vagy e-mailben.</li>
+              <li>A Szolgáltató 24–72 órán belül személyre szabott ajánlatot küld.</li>
+              <li>Az Ügyfél az ajánlatot e-mailben elfogadja.</li>
+              <li>A foglalás a díj megérkezésével válik véglegessé.</li>
+            </ul>
+          </div>
 
-  <h2>4. Fizetési feltételek</h2>
-  <p>Fizetés banki átutalással. Számla e-mailben kerül kiküldésre.</p>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              4. Fizetési feltételek
+            </h2>
+            <p>
+              A fizetés banki átutalással történik. A Szolgáltató minden fizetésről
+              elektronikus számlát állít ki. A foglalás akkor minősül érvényesnek, ha
+              a teljes összeg beérkezik.
+            </p>
+          </div>
 
-  <h2>5. Lemondási feltételek</h2>
-  <ul>
-    <li>Repülőjegy: nem visszatéríthető</li>
-    <li>Szállás: szállásadó feltételei szerint</li>
-    <li>Meccsjegy: nem visszatéríthető</li>
-  </ul>
+          <!-- ITT MÓDOSÍTOTTUK A 1–2. SOROKAT -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              5. Lemondási feltételek
+            </h2>
+            <p>
+              A foglalás elemei lemondás esetén az alábbiak szerint kezelendők:
+            </p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>
+                <strong>Repülőjegy:</strong> visszatérítendő, a légitársaság által
+                biztosított visszatérítési szabályoknak megfelelően.
+              </li>
+              <li>
+                <strong>Szállás:</strong> visszatérítendő, a szállásadó által
+                biztosított visszatérítési szabályoknak megfelelően.
+              </li>
+              <li>
+                <strong>Meccsjegy:</strong> nem visszatérítendő.
+              </li>
+            </ul>
+            <p class="mt-2">
+              A visszatérítés pontos összege minden esetben a szolgáltatók (légitársaság,
+              szállásadó, jegyértékesítő) által ténylegesen biztosított visszatérítés
+              alapján kerül meghatározásra.
+            </p>
+          </div>
 
-  <h2>6. Meccsidőpont módosítás / elhalasztás</h2>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              6. Meccsidőpont módosítás / elhalasztás
+            </h2>
+            <h3 class="font-semibold mt-2 mb-1">6.1. Az ajánlat érvényessége</h3>
+            <p>
+              Amennyiben a mérkőzés időpontja megváltozik vagy a mérkőzést elhalasztják,
+              a csomag automatikusan érvényes az új időpontra. Az Ügyfél az új időpontban
+              utazhat.
+            </p>
 
-  <h3>6.1. Az ajánlat érvényessége</h3>
-  <p>A csomag automatikusan érvényes az új időpontra.</p>
+            <h3 class="font-semibold mt-3 mb-1">6.2. Ügyfél visszatérítési joga</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>A repülőjegy visszatérítendő.</li>
+              <li>A szállás visszatérítendő.</li>
+              <li>A meccsjegy nem visszatérítendő.</li>
+            </ul>
+            <p>
+              A visszatérítés összege a szolgáltatók ténylegesen biztosított
+              visszatérítésén alapul.
+            </p>
 
-  <h3>6.2. Visszatérítés</h3>
-  <ul>
-    <li>A repülőjegy visszatérítendő</li>
-    <li>A szállás visszatérítendő</li>
-    <li>A meccsjegy nem visszatérítendő</li>
-  </ul>
+            <h3 class="font-semibold mt-3 mb-1">6.3. Tájékoztatás és segítségnyújtás</h3>
+            <p>
+              A Szolgáltató minden esetben értesíti az Ügyfelet a változásról, és
+              segítséget nyújt az új időpont vagy a visszatérítés intézésében.
+            </p>
+          </div>
 
-  <h3>6.3. Segítségnyújtás</h3>
-  <p>A Szolgáltató segít az új időponttal vagy visszatérítéssel kapcsolatban.</p>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              7. Panaszkezelés
+            </h2>
+            <p>
+              Panasz benyújtható e-mailben a következő címen:
+              <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
+                utazzmeccsre@gmail.com
+              </a>.
+              A Szolgáltató 5 munkanapon belül válaszol.
+            </p>
+          </div>
 
-  <h2>7. Panaszkezelés</h2>
-  <p>E-mail: utazzmeccsre@gmail.com</p>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              8. Adatkezelés
+            </h2>
+            <p>
+              Az adatkezelés részleteit az Adatvédelmi tájékoztató tartalmazza, amely
+              elérhető az
+              <a href="adatvedelem.html" class="text-red-600 hover:underline">
+                Adatvédelmi tájékoztató
+              </a>
+              oldalon.
+            </p>
+          </div>
 
-  <h2>8. Adatkezelés</h2>
-  <p>Az adatkezelés részleteit az Adatvédelmi tájékoztató tartalmazza.</p>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              9. Felelősségkorlátozás
+            </h2>
+            <p>
+              A Szolgáltató felelősséget vállal minden, a mérkőzés időpontjának
+              módosításából vagy elhalasztásából fakadó ügyintézésért. Ilyen esetben
+              új időpontot ajánl fel vagy segít a visszatérítés intézésében.
+            </p>
+            <p>
+              A Szolgáltató közvetítőként jár el a szállásadók, légitársaságok és
+              jegyforgalmazók felé, és a lehető legkedvezőbb megoldást biztosítja.
+            </p>
+            <p>
+              A nem visszatéríthető szolgáltatási elemekért (pl. meccsjegy) nem vállal
+              felelősséget, de az adminisztrációban segítséget nyújt.
+            </p>
+          </div>
 
-  <h2>9. Felelősségkorlátozás</h2>
-  <p>A Szolgáltató felelősséget vállal minden meccsidőpont módosulással kapcsolatos ügyintézésért...</p>
+          <div>
+            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
+              10. Egyéb rendelkezések
+            </h2>
+            <p>
+              Az ÁSZF a közzététel napjától visszavonásig érvényes. A foglalással az
+              Ügyfél elfogadja jelen ÁSZF-et.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
 
-  <h2>10. Egyéb rendelkezések</h2>
-  <p>Az ÁSZF visszavonásig érvényes.</p>
-</div>
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
+      <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
+      <p class="text-xs mb-2">Szlovákia, 932 01, Veľký Meder, Kúpelná 18</p>
 
+      <p class="text-sm">
+        Ha kérdésed van, írj nekünk:
+        <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">
+          utazzmeccsre@gmail.com
+        </a>
+      </p>
 
-<footer>
-  <p style="font-weight:600; font-size:1.1rem;">UtazzMeccsre</p>
-  <p>Szlovákia, 932 01, Veľký Meder, Kúpelná 18</p>
+      <div class="flex justify-center gap-6 mt-4 text-sm">
+        <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
+        <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
+        <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
+      </div>
 
-  <p><a href="mailto:utazzmeccsre@gmail.com">utazzmeccsre@gmail.com</a></p>
-
-  <div class="footer-links" style="margin-top:1rem;">
-    <a href="aszf.html">ÁSZF</a>
-    <a href="impresszum.html">Impresszum</a>
-    <a href="adatvedelem.html">Adatvédelmi tájékoztató</a>
-  </div>
-
-  <p style="font-size:0.8rem; color:#777; margin-top:1rem;">
-    © 2025 UtazzMeccsre – Minden jog fenntartva.
-  </p>
-</footer>
-
-</body>
+      <p class="text-xs text-gray-500 mt-4">
+        © 2025 UtazzMeccsre – Minden jog fenntartva.
+      </p>
+    </footer>
+  </body>
 </html>
