@@ -10,9 +10,11 @@
     />
   </head>
   <body class="bg-gray-50 text-gray-900">
-    <!-- Navigációs sáv csak logóval -->
+    <!-- Navigációs sáv: logó + jogi oldalak -->
     <header class="bg-white shadow-md w-full">
-      <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <div
+        class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 px-6 py-4"
+      >
         <a href="index.html" class="flex items-center">
           <img
             src="utazzmeccsre-logo.png"
@@ -20,6 +22,12 @@
             class="h-16 w-auto"
           />
         </a>
+        <nav class="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-700">
+          <a href="index.html" class="hover:text-red-600">Főoldal</a>
+          <a href="aszf.html" class="text-red-600">ÁSZF</a>
+          <a href="impresszum.html" class="hover:text-red-600">Impresszum</a>
+          <a href="adatvedelem.html" class="hover:text-red-600">Adatvédelmi tájékoztató</a>
+        </nav>
       </div>
     </header>
 
@@ -39,7 +47,7 @@
               1. A Szolgáltató adatai
             </h2>
             <p><strong>Szolgáltató neve:</strong> UtazzMeccsre</p>
-            <p><strong>Székhely:</strong> Szlovákia, 932 01, Veľký Meder, Kúpelná 18</p>
+            <!-- Székhely szándékosan NINCS feltüntetve -->
             <p>
               <strong>E-mail:</strong>
               <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
@@ -86,7 +94,6 @@
             </p>
           </div>
 
-          <!-- ITT MÓDOSÍTOTTUK A 1–2. SOROKAT -->
           <div>
             <h2 class="text-xl font-semibold mb-2 border-b pb-1">
               5. Lemondási feltételek
@@ -202,10 +209,9 @@
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (cím nélkül) -->
     <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
       <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
-      <p class="text-xs mb-2">Szlovákia, 932 01, Veľký Meder, Kúpelná 18</p>
 
       <p class="text-sm">
         Ha kérdésed van, írj nekünk:
