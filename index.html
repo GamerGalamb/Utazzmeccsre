@@ -16,79 +16,60 @@
     </script>
   </head>
   <body class="bg-gray-50 text-gray-900">
-    <!-- Navigációs sáv -->
-    <header class="bg-white shadow-md w-full">
-      <div
-        class="container mx-auto flex items-center justify-between px-6 py-4"
+   <!-- Navigációs sáv -->
+<header class="bg-white shadow-md w-full">
+  <div class="container mx-auto flex items-center justify-between px-6 py-4">
+    
+    <!-- Logó -->
+    <a href="index.html" class="flex items-center">
+      <img src="utazzmeccsre-logo.png"
+           alt="UtazzMeccsre logó"
+           class="h-20 w-auto" />
+    </a>
+
+    <!-- Asztali menü -->
+    <nav class="space-x-6 hidden md:flex items-center">
+      <a href="index.html" class="text-gray-700 hover:text-red-600 font-medium transition">Főoldal</a>
+      <a href="turak.html" class="text-gray-700 hover:text-red-600 font-medium transition">Túrák</a>
+      <a href="#why-us" class="text-gray-700 hover:text-red-600 font-medium transition">Miért minket?</a>
+
+      <!-- ÚJ GYIK -->
+      <a href="gyik.html" class="text-gray-700 hover:text-red-600 font-medium transition">GYIK</a>
+
+      <a href="#contact" class="text-gray-700 hover:text-red-600 font-medium transition">Kapcsolat</a>
+
+      <!-- Pénznemváltó -->
+      <select
+        id="currencySelector"
+        class="border border-gray-300 rounded-md px-2 py-1 font-semibold text-gray-700 hover:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
       >
-        <!-- Logó -->
-      <a href="index.html" class="flex items-center">
-  <img src="utazzmeccsre-logo.png"
-       alt="UtazzMeccsre logó"
-       class="h-20 w-auto" />
-</a>
+        <option value="HUF" selected>HUF</option>
+        <option value="EUR">EUR</option>
+      </select>
+    </nav>
 
+    <!-- Hamburger ikon mobilra -->
+    <button onclick="toggleMenu()" class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
 
-        <!-- Asztali menü -->
-        <nav class="space-x-6 hidden md:flex items-center">
-          <a
-            href="index.html"
-            class="text-gray-700 hover:text-red-600 font-medium transition"
-            >Főoldal</a>
-          <a
-            href="turak.html"
-            class="text-gray-700 hover:text-red-600 font-medium transition"
-            >Túrák</a>
-          <a
-            href="#why-us"
-            class="text-gray-700 hover:text-red-600 font-medium transition"
-            >Miért minket?</a>
-          <a
-            href="#contact"
-            class="text-gray-700 hover:text-red-600 font-medium transition"
-            >Kapcsolat</a>
+  <!-- Mobil menü -->
+  <nav id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-md md:hidden">
+    <div class="flex flex-col items-center space-y-3 py-4">
+      <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Főoldal</a>
+      <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Túrák</a>
+      <a href="#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Miért minket?</a>
 
-          <select
-            id="currencySelector"
-            class="border border-gray-300 rounded-md px-2 py-1 font-semibold text-gray-700 hover:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
-          >
-            <option value="HUF" selected>HUF</option>
-            <option value="EUR">EUR</option>
-          </select>
-        </nav>
+      <!-- ÚJ GYIK -->
+      <a href="gyik.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">GYIK</a>
 
-        <!-- Hamburger ikon -->
-        <button
-          onclick="toggleMenu()"
-          class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-7 w-7"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobil menü -->
-      <nav
-        id="mobile-menu"
-        class="hidden bg-white border-t border-gray-200 shadow-md md:hidden"
-      >
-        <div class="flex flex-col items-center space-y-3 py-4">
-          <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Főoldal</a>
-          <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Túrák</a>
-          <a href="#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Miért minket?</a>
-          <a href="#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Kapcsolat</a>
+      <a href="#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Kapcsolat</a>
+   
 
           <select
             id="currencySelectorMobile"
@@ -272,6 +253,7 @@
     </script>
   </body>
 </html>
+
 
 
 
