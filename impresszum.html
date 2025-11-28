@@ -1,86 +1,107 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UtazzMeccsre – Impresszum</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-gray-50 text-gray-900">
-    <!-- Header logó + nav -->
-    <header class="bg-white shadow-md w-full">
-      <div
-        class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 px-6 py-4"
-      >
-        <a href="index.html" class="flex items-center">
-          <img
-            src="utazzmeccsre-logo.png"
-            alt="UtazzMeccsre logó"
-            class="h-16 w-auto"
-          />
-        </a>
-        <nav class="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-700">
-          <a href="index.html" class="hover:text-red-600">Főoldal</a>
-          <a href="aszf.html" class="hover:text-red-600">ÁSZF</a>
-          <a href="impresszum.html" class="text-red-600">Impresszum</a>
-          <a href="adatvedelem.html" class="hover:text-red-600">Adatvédelmi tájékoztató</a>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UtazzMeccsre – Impresszum</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      if (menu) menu.classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header logó + nav -->
+  <header class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center">
+        <img src="utazzmeccsre-logo.png" alt="UtazzMeccsre logó" class="h-20 w-auto" />
+      </a>
+
+      <!-- Asztali menü -->
+      <nav class="space-x-6 hidden md:flex items-center text-sm font-medium text-gray-700">
+        <a href="index.html" class="hover:text-red-600">Főoldal</a>
+        <a href="turak.html" class="hover:text-red-600">Túrák</a>
+        <a href="index.html#why-us" class="hover:text-red-600">Miért minket?</a>
+        <a href="rolunk.html" class="hover:text-red-600">Rólunk</a>
+        <a href="gyik.html" class="hover:text-red-600">GYIK</a>
+        <a href="#contact" class="hover:text-red-600">Kapcsolat</a>
+        <a href="aszf.html" class="hover:text-red-600">ÁSZF</a>
+        <a href="impresszum.html" class="text-red-600">Impresszum</a>
+        <a href="adatvedelem.html" class="hover:text-red-600">Adatvédelmi tájékoztató</a>
+      </nav>
+
+      <!-- Mobil hamburgermenü -->
+      <button onclick="toggleMenu()" class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobil menü -->
+    <nav id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-md md:hidden">
+      <div class="flex flex-col items-center space-y-3 py-4 text-sm font-medium">
+        <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Főoldal</a>
+        <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Túrák</a>
+        <a href="index.html#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Miért minket?</a>
+        <a href="rolunk.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Rólunk</a>
+        <a href="gyik.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">GYIK</a>
+        <a href="#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Kapcsolat</a>
+        <a href="aszf.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">ÁSZF</a>
+        <a href="impresszum.html" onclick="toggleMenu()" class="text-red-600 font-semibold">Impresszum</a>
+        <a href="adatvedelem.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Adatvédelmi tájékoztató</a>
       </div>
-    </header>
+    </nav>
+  </header>
 
-    <!-- Tartalom -->
-    <main class="container mx-auto px-6 py-10 max-w-3xl">
-      <div class="bg-white shadow-lg rounded-2xl p-8">
-        <h1 class="text-3xl font-bold mb-6 text-gray-800">Impresszum</h1>
+  <!-- Tartalom -->
+  <main class="container mx-auto px-6 py-10 max-w-3xl">
+    <div class="bg-white shadow-lg rounded-2xl p-8">
+      <h1 class="text-3xl font-bold mb-6 text-gray-800">Impresszum</h1>
+      <div class="space-y-3 text-sm md:text-base text-gray-800">
+        <p><strong>Szolgáltató neve:</strong> UtazzMeccsre</p>
 
-        <div class="space-y-3 text-sm md:text-base text-gray-800">
-          <p><strong>Szolgáltató neve:</strong> UtazzMeccsre</p>
-          <!-- Székhely sor eltávolítva kérés szerint -->
-          <p>
-            <strong>E-mail:</strong>
-            <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
-              utazzmeccsre@gmail.com
-            </a>
-          </p>
+        <p>
+          <strong>E-mail:</strong>
+          <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
+            utazzmeccsre@gmail.com
+          </a>
+        </p>
 
-          <p class="mt-4">
-            A weboldal célja futballmérkőzésekre szervezett utazási csomagok bemutatása
-            és ajánlatkérés lehetőségének biztosítása.
-          </p>
+        <p class="mt-4">
+          A weboldal célja futballmérkőzésekre szervezett utazási csomagok bemutatása és ajánlatkérés
+          lehetőségének biztosítása.
+        </p>
 
-          <p>
-            A weboldalon megjelenő tartalmak (szövegek, képek, árak, grafikai elemek)
-            az UtazzMeccsre tulajdonát képezik. Ezek másolása, módosítása vagy
-            felhasználása kizárólag a Szolgáltató előzetes, írásbeli engedélyével
-            lehetséges.
-          </p>
-        </div>
+        <p>
+          A weboldalon megjelenő tartalmak (szövegek, képek, árak, grafikai elemek) az UtazzMeccsre
+          tulajdonát képezik. Ezek másolása, módosítása vagy felhasználása kizárólag a Szolgáltató
+          előzetes, írásbeli engedélyével lehetséges.
+        </p>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Footer (cím nélkül) -->
-    <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
-      <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
-
-      <p class="text-sm">
-        Ha kérdésed van, írj nekünk:
-        <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">
-          utazzmeccsre@gmail.com
-        </a>
-      </p>
-
-      <div class="flex justify-center gap-6 mt-4 text-sm">
-        <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
-        <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
-        <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
-      </div>
-
-      <p class="text-xs text-gray-500 mt-4">
-        © 2025 UtazzMeccsre – Minden jog fenntartva.
-      </p>
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
+    <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
+    <p class="text-sm">
+      Ha kérdésed van, írj nekünk:
+      <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">utazzmeccsre@gmail.com</a>
+    </p>
+    <div class="flex justify-center gap-6 mt-4 text-sm">
+      <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
+      <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
+      <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">
+      © 2025 UtazzMeccsre – Minden jog fenntartva.
+    </p>
+  </footer>
+</body>
 </html>
