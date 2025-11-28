@@ -41,7 +41,13 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- GYIK – alacsonyabb prioritás -->
+  <!-- Rólunk -->
+  <url>
+    <loc>https://utazzmeccsre.hu/rolunk.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- GYIK -->
   <url>
     <loc>https://utazzmeccsre.hu/gyik.html</loc>
     <priority>0.5</priority>
