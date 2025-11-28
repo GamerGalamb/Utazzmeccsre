@@ -4,14 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rólunk – UtazzMeccsre</title>
-
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <style>
-    .fade-in { opacity: 0; animation: fadeIn 0.8s ease-out forwards; }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Reszponzív YouTube wrapper – 16:9 arány */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 0.75rem; /* kerekített sarkok */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
   </style>
 
@@ -21,38 +52,28 @@
     }
   </script>
 </head>
-
 <body class="bg-gray-50 text-gray-900">
-
   <!-- Navigáció -->
   <header class="bg-white shadow-md w-full">
     <div class="container mx-auto flex items-center justify-between px-6 py-4">
-
       <a href="index.html" class="flex items-center">
         <img src="utazzmeccsre-logo.png" alt="UtazzMeccsre" class="h-20 w-auto">
       </a>
-
       <nav class="space-x-6 hidden md:flex items-center">
         <a href="index.html" class="text-gray-700 hover:text-red-600">Főoldal</a>
         <a href="turak.html" class="text-gray-700 hover:text-red-600">Túrák</a>
         <a href="index.html#why-us" class="text-gray-700 hover:text-red-600">Miért minket?</a>
-
         <a href="rolunk.html" class="text-red-600 font-semibold border-b-2 border-red-600 pb-1">Rólunk</a>
-
         <a href="gyik.html" class="text-gray-700 hover:text-red-600">GYIK</a>
         <a href="#contact" class="text-gray-700 hover:text-red-600">Kapcsolat</a>
       </nav>
-
       <button onclick="toggleMenu()" class="md:hidden text-gray-700 hover:text-red-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-
     </div>
-
     <!-- Mobil menü -->
     <nav id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-md md:hidden">
       <div class="flex flex-col items-center space-y-3 py-4">
@@ -68,16 +89,14 @@
 
   <!-- Tartalom -->
   <section class="max-w-4xl mx-auto py-16 px-6 fade-in">
-
     <h1 class="text-4xl font-extrabold text-center mb-8">Rólunk</h1>
 
-    <!-- A TE iframe-ed, egy kis középre igazítással -->
+    <!-- Reszponzív YouTube videó -->
     <div class="mb-10 flex justify-center">
-      <div class="rounded-xl shadow-xl overflow-hidden">
-        <iframe width="560" height="315"
+      <div class="video-wrapper">
+        <iframe
           src="https://www.youtube.com/embed/TP8pzg4XDfo?si=LWQR_d0sR0qIMDLa"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen>
@@ -90,12 +109,10 @@
       Az UtazzMeccsre.hu célja, hogy a sport és az utazás szerelmeseinek felejthetetlen élményeket biztosítson.
       Olyan komplett csomagokat állítunk össze, amelyek tartalmazzák a repjegyet, szállást és meccsjegyet is.
     </p>
-
     <p class="text-lg text-gray-700 leading-relaxed mb-6">
       Csapatunk minden igényt figyelembe vesz, legyen szó családi kiruccanásról, baráti focitúráról
       vagy egy régóta várt élmény megvalósításáról.
     </p>
-
   </section>
 
   <!-- Kapcsolat -->
@@ -104,12 +121,10 @@
     <p class="text-lg text-gray-700 mb-6">
       Írj nekünk, és segítünk megtervezni a következő meccses utazásodat!
     </p>
-
     <a href="mailto:utazzmeccsre@gmail.com"
        class="text-red-600 font-semibold hover:underline block mb-4">
       utazzmeccsre@gmail.com
     </a>
-
     <a href="https://forms.gle/UffjJb1JqkjPdr7r8" target="_blank"
        class="inline-block bg-red-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-red-700 transition">
       Egyedi ajánlatkérés
@@ -119,19 +134,15 @@
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
     <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
-
     <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline text-sm">
       utazzmeccsre@gmail.com
     </a>
-
     <div class="flex justify-center gap-6 mt-4 text-sm">
       <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
       <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
       <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
     </div>
-
     <p class="text-xs text-gray-500 mt-4">© 2025 UtazzMeccsre – Minden jog fenntartva.</p>
   </footer>
-
 </body>
 </html>
