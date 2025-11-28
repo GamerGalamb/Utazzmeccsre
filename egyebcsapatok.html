@@ -1,488 +1,214 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Egyéb csapatok – UtazzMeccsre</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egyéb csapatok – UtazzMeccsre</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      if (menu) menu.classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
 
   <!-- Navigáció -->
-<header class="bg-white shadow-md w-full">
-  <div class="container mx-auto flex items-center justify-between px-6 py-4">
+  <header class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logó -->
+      <a href="index.html" class="flex items-center">
+        <img src="utazzmeccsre-logo.png" alt="UtazzMeccsre logó" class="h-20 w-auto" />
+      </a>
 
-    <!-- Logó -->
-    <a href="index.html" class="flex items-center">
-      <img src="utazzmeccsre-logo.png"
-           alt="UtazzMeccsre logó"
-           class="h-20 w-auto" />
-    </a>
+      <!-- Asztali menü -->
+      <nav class="space-x-6 hidden md:flex items-center">
+        <a href="index.html" class="text-gray-700 hover:text-red-600 font-medium transition">Főoldal</a>
+        <a href="turak.html" class="text-gray-700 hover:text-red-600 font-medium transition">Túrák</a>
+        <a href="index.html#why-us" class="text-gray-700 hover:text-red-600 font-medium transition">Miért minket?</a>
+        <a href="gyik.html" class="text-gray-700 hover:text-red-600 font-medium transition">GYIK</a>
+        <a href="index.html#contact" class="text-gray-700 hover:text-red-600 font-medium transition">Kapcsolat</a>
+      </nav>
 
-    <!-- Asztali menü -->
-    <nav class="space-x-6 hidden md:flex items-center">
-      <a href="index.html" class="text-gray-700 hover:text-red-600 font-medium transition">Főoldal</a>
-      <a href="turak.html" class="text-gray-700 hover:text-red-600 font-medium transition">Túrák</a>
+      <!-- Mobil hamburgermenü -->
+      <button onclick="toggleMenu()" class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
 
-      <!-- ÚJ: Miért minket? -->
-      <a href="index.html#why-us" class="text-gray-700 hover:text-red-600 font-medium transition">Miért minket?</a>
-
-      <!-- ÚJ: GYIK -->
-      <a href="gyik.html" class="text-gray-700 hover:text-red-600 font-medium transition">GYIK</a>
-
-      <a href="index.html#contact" class="text-gray-700 hover:text-red-600 font-medium transition">Kapcsolat</a>
+    <!-- Mobil menü -->
+    <nav id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-md md:hidden">
+      <div class="flex flex-col items-center space-y-3 py-4">
+        <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Főoldal</a>
+        <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Túrák</a>
+        <a href="index.html#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Miért minket?</a>
+        <a href="gyik.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">GYIK</a>
+        <a href="index.html#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Kapcsolat</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- Mobil hamburgermenü -->
-    <button onclick="toggleMenu()" class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
-        viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-
+  <!-- Vissza a túrákhoz -->
+  <div class="container mx-auto px-6 md:px-20 py-6">
+    <a href="turak.html"
+       class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+      ← Vissza a túrákhoz
+    </a>
   </div>
 
-  <!-- Mobil menü -->
-  <nav id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-md md:hidden">
-    <div class="flex flex-col items-center space-y-3 py-4">
-      <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Főoldal</a>
-      <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Túrák</a>
+  <!-- Egyéb csapatok -->
+  <section class="py-12 px-6 md:px-20">
+    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-4">Egyéb csapatok</h2>
+    <p class="text-center text-gray-700 mb-10 max-w-2xl mx-auto">
+      Ha a kedvenc csapatod nem szerepel a fő listákban, itt is találsz néhány izgalmas célpontot.
+      Ha máshová mennél, válaszd az „Egyéb csapat / egyedi kérés” opciót!
+    </p>
 
-      <!-- ÚJ: Miért minket? -->
-      <a href="index.html#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Miért minket?</a>
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <!-- Ajax -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg"
+             alt="Ajax" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Ajax</h3>
+        <p class="text-sm text-gray-500 mb-3">Hollandia</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Ajax&entry.129531084=Hollandia"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
 
-      <!-- ÚJ: GYIK -->
-      <a href="gyik.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">GYIK</a>
+      <!-- Benfica -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg"
+             alt="Benfica" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Benfica</h3>
+        <p class="text-sm text-gray-500 mb-3">Portugália</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Benfica&entry.129531084=Portugália"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
 
-      <a href="index.html#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Kapcsolat</a>
+      <!-- Porto -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto_crest.svg"
+             alt="FC Porto" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Porto</h3>
+        <p class="text-sm text-gray-500 mb-3">Portugália</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Porto&entry.129531084=Portugália"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
+
+      <!-- Sporting CP -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Sporting_Clube_de_Portugal.png"
+             alt="Sporting CP" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Sporting CP</h3>
+        <p class="text-sm text-gray-500 mb-3">Portugália</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Sporting+CP&entry.129531084=Portugália"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
+
+      <!-- Celtic -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/35/Celtic_FC_crest.svg"
+             alt="Celtic" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Celtic</h3>
+        <p class="text-sm text-gray-500 mb-3">Skócia</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Celtic&entry.129531084=Skócia"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
+
+      <!-- Rangers -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Rangers_FC.svg"
+             alt="Rangers" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Rangers</h3>
+        <p class="text-sm text-gray-500 mb-3">Skócia</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Rangers&entry.129531084=Skócia"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
+
+      <!-- Galatasaray -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Galatasaray_Sports_Club_Logo.svg"
+             alt="Galatasaray" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Galatasaray</h3>
+        <p class="text-sm text-gray-500 mb-3">Törökország</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Galatasaray&entry.129531084=Törökország"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
+
+      <!-- Fenerbahçe -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Fenerbah%C3%A7e_logo.svg"
+             alt="Fenerbahçe" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <h3 class="text-xl font-semibold mb-1">Fenerbahçe</h3>
+        <p class="text-sm text-gray-500 mb-3">Törökország</p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Fenerbahce&entry.129531084=Törökország"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
     </div>
-  </nav>
-</header>
 
-    <div class="container mx-auto px-6 md:px-20 py-6">
+    <!-- Egyéb / nincs a listán -->
+    <div class="mt-12 text-center">
+      <p class="text-gray-700 mb-4">
+        Nem látod a csapatodat a listában?
+      </p>
       <a
-        href="turak.html"
-        class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300"
-      >
-        ← Vissza a túrákhoz
+        href="https://forms.gle/UffjJb1JqkjPdr7r8"
+        target="_blank"
+        class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full transition">
+        Egyéb csapat / egyedi kérés
       </a>
     </div>
+  </section>
 
-    <section class="py-12 px-6 md:px-20">
-      <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
-        Egyéb népszerű csapatok
-      </h2>
-
-      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-10">
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Celtic_FC.svg/1200px-Celtic_FC.svg.png"
-            alt="Celtic"
-            class="team-logo"
-          />
-          <h3 class="team-name">Celtic</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Celtic&entry.129531084=Egyéb&entry.129531084.other_option_response=Skócia"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Rangers_FC.svg/1200px-Rangers_FC.svg.png"
-            alt="Rangers"
-            class="team-logo"
-          />
-          <h3 class="team-name">Rangers</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Rangers&entry.129531084=Egyéb&entry.129531084.other_option_response=Skócia"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/Ajax_Amsterdam.svg/1200px-Ajax_Amsterdam.svg.png"
-            alt="Ajax"
-            class="team-logo"
-          />
-          <h3 class="team-name">Ajax</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Ajax&entry.129531084=Egyéb&entry.129531084.other_option_response=Hollandia"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Feyenoord_logo_since_2024.svg/1200px-Feyenoord_logo_since_2024.svg.png"
-            alt="Feyenoord"
-            class="team-logo"
-          />
-          <h3 class="team-name">Feyenoord</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Feyenoord&entry.129531084=Egyéb&entry.129531084.other_option_response=Hollandia"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/PSV_Eindhoven.svg/1200px-PSV_Eindhoven.svg.png"
-            alt="PSV"
-            class="team-logo"
-          />
-          <h3 class="team-name">PSV</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=PSV&entry.129531084=Egyéb&entry.129531084.other_option_response=Hollandia"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/SL_Benfica_logo.svg/1200px-SL_Benfica_logo.svg.png"
-            alt="Benfica"
-            class="team-logo"
-          />
-          <h3 class="team-name">Benfica</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Benfica&entry.129531084=Egyéb&entry.129531084.other_option_response=Portugália"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Sporting_CP_crest.svg/909px-Sporting_CP_crest.svg.png"
-            alt="Sporting Lisboa"
-            class="team-logo"
-          />
-          <h3 class="team-name">Sporting Lisboa</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Sporting+Lisboa&entry.129531084=Egyéb&entry.129531084.other_option_response=Portugália"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/S.C._Braga_logo.svg/1024px-S.C._Braga_logo.svg.png"
-            alt="SC Braga"
-            class="team-logo"
-          />
-          <h3 class="team-name">SC Braga</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=SC+Braga&entry.129531084=Egyéb&entry.129531084.other_option_response=Portugália"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg"
-            alt="Porto"
-            class="team-logo"
-          />
-          <h3 class="team-name">Porto</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Porto&entry.129531084=Egyéb&entry.129531084.other_option_response=Portugália"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Club_Brugge_KV_logo.svg/920px-Club_Brugge_KV_logo.svg.png"
-            alt="Club Brugge"
-            class="team-logo"
-          />
-          <h3 class="team-name">Club Brugge</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Club+Brugge&entry.129531084=Egyéb&entry.129531084.other_option_response=Belgium"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2b/SK_Slavia_Praha_full_logo.svg"
-            alt="Slavia Praha"
-            class="team-logo"
-          />
-          <h3 class="team-name">Slavia Praha</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Slavia+Praha&entry.129531084=Egyéb&entry.129531084.other_option_response=Csehország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fOSYVSYSk22hIOI4TTS0pduW10cFVL__xg&s"
-            alt="Sparta Praha"
-            class="team-logo"
-          />
-          <h3 class="team-name">Sparta Praha</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Sparta+Praha&entry.129531084=Egyéb&entry.129531084.other_option_response=Csehország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-          src=https://upload.wikimedia.org/wikipedia/commons/a/a4/Legia_Warsaw_logo.png
-          alt="Legia Warszawa" class="team-logo" />
-          <h3 class="team-name">Legia Warszawa</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Legia+Warszawa&entry.129531084=Egyéb&entry.129531084.other_option_response=Lengyelország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/b/bf/SK_Rapid_Wien_Logo.svg"
-            alt="Rapid Wien"
-            class="team-logo"
-          />
-          <h3 class="team-name">Rapid Wien</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Rapid+Wien&entry.129531084=Egyéb&entry.129531084.other_option_response=Ausztria"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREl3scrqBaMzzdgA5hoZCVgnCmU1UlBDrf2w&s"
-            alt="Austria Wien"
-            class="team-logo"
-          />
-          <h3 class="team-name">Austria Wien</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Austria+Wien&entry.129531084=Egyéb&entry.129531084.other_option_response=Ausztria"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/7/77/FC_Red_Bull_Salzburg_logo.svg/1185px-FC_Red_Bull_Salzburg_logo.svg.png"
-            alt="RB Salzburg"
-            class="team-logo"
-          />
-          <h3 class="team-name">RB Salzburg</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=RB+Salzburg&entry.129531084=Egyéb&entry.129531084.other_option_response=Ausztria"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/SK_Slovan_Bratislava_logo.svg/952px-SK_Slovan_Bratislava_logo.svg.png"
-            alt="Slovan Bratislava"
-            class="team-logo"
-          />
-          <h3 class="team-name">Slovan Bratislava</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Slovan+Bratislava&entry.129531084=Egyéb&entry.129531084.other_option_response=Szlovákia"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/250px-Olympiacos_FC_crest.svg.png"
-            alt="Olympiacos"
-            class="team-logo"
-          />
-          <h3 class="team-name">Olympiacos</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Olympiacos&entry.129531084=Egyéb&entry.129531084.other_option_response=Görögország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/8/84/Panathinaikos_F.C._logo.svg"
-            alt="Panathinaikos"
-            class="team-logo"
-          />
-          <h3 class="team-name">Panathinaikos</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Panathinaikos&entry.129531084=Egyéb&entry.129531084.other_option_response=Görögország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-          src=https://images.seeklogo.com/logo-png/29/1/the-football-association-the-fa-logo-png_seeklogo-295683.png
-          alt="Angol valogatott" class="team-logo">
-          <h3>Angol válogatott</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Angol+válogatott&entry.129531084=Egyéb&entry.129531084.other_option_response=Anglia"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://adatbank.mlsz.hu/meccs-center/img/mlsz-logo-kicsi.png"
-            alt="Magyar válogatott"
-            class="team-logo"
-          />
-          <h3 class="team-name">Magyar válogatott</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Magyar+válogatott&entry.129531084=Egyéb&entry.129531084.other_option_response=Magyarország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://b59dab36bb.clvaw-cdnwnd.com/e25f35f04a3c3a8e0562e77704f7eda1/200000346-e64b5e64b8/Logo_%C3%89quipe_Espagne_Football_-_2021.jpg?ph=b59dab36bb"
-            alt="Spanyol válogatott"
-            class="team-logo"
-          />
-          <h3 class="team-name">Spanyol válogatott</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Spanyol+válogatott&entry.129531084=Egyéb&entry.129531084.other_option_response=Spanyolország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-
-        <div class="team-card">
-          <img
-            src="https://gobelin.hu/wp-content/uploads/2021/07/MG-518-1.png"
-            alt="Olasz válogatott"
-            class="team-logo"
-          />
-          <h3 class="team-name">Olasz válogatott</h3>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Olasz+válogatott&entry.129531084=Egyéb&entry.129531084.other_option_response=Olaszország"
-            target="_blank"
-            class="offer-btn"
-            >Ajánlatkérés</a
-          >
-        </div>
-      </div>
-    </section>
-
-     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
-      <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
-
-      <p class="text-sm">
-        Ha kérdésed van, írj nekünk:
-        <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">
-          utazzmeccsre@gmail.com
-        </a>
-      </p>
-
-      <div class="flex justify-center gap-6 mt-4 text-sm">
-        <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
-        <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
-        <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
-      </div>
-
-      <p class="text-xs text-gray-500 mt-4">
-        © 2025 UtazzMeccsre – Minden jog fenntartva.
-      </p>
-    </footer>
-
-    <style>
-      .team-card {
-        background: #fff;
-        border-radius: 16px;
-        padding: 24px;
-        text-align: center;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: 0.3s;
-      }
-
-      .team-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
-      }
-
-      .team-logo {
-        width: 96px;
-        height: 96px;
-        margin: 0 auto 12px;
-        object-fit: contain;
-      }
-
-      .team-name {
-        font-weight: bold;
-        margin-bottom: 12px;
-      }
-
-      .offer-btn {
-        display: inline-block;
-        background: #dc2626;
-        color: #fff;
-        padding: 8px 18px;
-        border-radius: 9999px;
-        font-weight: 600;
-        transition: 0.3s;
-      }
-
-      .offer-btn:hover {
-        background: linear-gradient(to right, #f87171, #b91c1c);
-      }
-    </style>
-  </body>
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
+    <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
+    <p class="text-sm">
+      Ha kérdésed van, írj nekünk:
+      <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">utazzmeccsre@gmail.com</a>
+    </p>
+    <div class="flex justify-center gap-6 mt-4 text-sm">
+      <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
+      <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
+      <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">© 2025 UtazzMeccsre – Minden jog fenntartva.</p>
+  </footer>
+</body>
 </html>
