@@ -10,23 +10,20 @@
 
   <!-- Fade-in animáció -->
   <style>
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 0.9s ease-out forwards;
-    }
+    .fade-in { opacity: 0; animation: fadeIn 0.8s ease-out forwards; }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(12px); }
+      from { opacity: 0; transform: translateY(10px); }
       to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("mobile-menu");
-      menu.classList.toggle("hidden");
+      document.getElementById("mobile-menu").classList.toggle("hidden");
     }
   </script>
 </head>
+
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Navigáció -->
@@ -48,10 +45,11 @@
         <a href="#contact" class="text-gray-700 hover:text-red-600">Kapcsolat</a>
       </nav>
 
-      <!-- Mobil ikon -->
       <button onclick="toggleMenu()" class="md:hidden text-gray-700 hover:text-red-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
@@ -70,29 +68,18 @@
     </nav>
   </header>
 
-  <!-- 🆕 HERO (1-es kép) -->
-  <section
-    class="relative bg-cover bg-center h-64 md:h-72 flex items-center justify-center fade-in"
-    style="background-image:url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1950&q=80');"
-  >
-    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center px-4">
-      <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Rólunk</h1>
-      <p class="text-lg md:text-xl text-gray-200 max-w-2xl">
-        Az UtazzMeccsre.hu mögött olyan csapat áll, aki a stadionélményt hozza közelebb hozzád.
-      </p>
-    </div>
-  </section>
-
-  <!-- Fő tartalom -->
+  <!-- Tartalom -->
   <section class="max-w-4xl mx-auto py-16 px-6 fade-in">
 
-    <!-- Videó -->
+    <h1 class="text-4xl font-extrabold text-center mb-8">Rólunk</h1>
+
+    <!-- YouTube videó -->
     <div class="mb-10">
       <div class="relative w-full h-0 pb-[56.25%] rounded-xl overflow-hidden shadow-xl bg-black">
         <iframe
           src="https://www.youtube.com/embed/TP8pzg4XDfo"
           title="UtazzMeccsre – TOP meccses utazás"
-          class="absolute top-0 left-0 w-full h-full"
+          class="absolute inset-0 w-full h-full"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -100,7 +87,7 @@
       </div>
     </div>
 
-    <!-- Szöveg (Kérdésed van? rész nélkül) -->
+    <!-- TE szöveged -->
     <p class="text-lg text-gray-700 leading-relaxed mb-6">
       Az UtazzMeccsre.hu célja, hogy a sport és az utazás szerelmeseinek felejthetetlen élményeket biztosítson.
       Olyan komplett csomagokat állítunk össze, amelyek tartalmazzák a repjegyet, szállást és meccsjegyet is.
