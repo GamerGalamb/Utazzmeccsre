@@ -71,7 +71,9 @@
       <a href="turak.html" class="text-gray-700 hover:text-red-600 font-medium transition">Túrák</a>
       <a href="#why-us" class="text-gray-700 hover:text-red-600 font-medium transition">Miért minket?</a>
 
-      <!-- ÚJ GYIK -->
+      <!-- ÚJ RÓLUNK -->
+      <a href="rolunk.html" class="text-gray-700 hover:text-red-600 font-medium transition">Rólunk</a>
+
       <a href="gyik.html" class="text-gray-700 hover:text-red-600 font-medium transition">GYIK</a>
 
       <a href="#contact" class="text-gray-700 hover:text-red-600 font-medium transition">Kapcsolat</a>
@@ -103,9 +105,10 @@
       <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Túrák</a>
       <a href="#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Miért minket?</a>
 
-      <!-- ÚJ GYIK -->
-      <a href="gyik.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">GYIK</a>
+      <!-- ÚJ RÓLUNK MOBIL -->
+      <a href="rolunk.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Rólunk</a>
 
+      <a href="gyik.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">GYIK</a>
       <a href="#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600 font-medium">Kapcsolat</a>
    
 
@@ -185,7 +188,7 @@
           </div>
         </div>
 
-        <!-- Madrid (Kép frissítve) -->
+        <!-- Madrid -->
         <div class="bg-white shadow-lg rounded-2xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
           <img
             src="https://external-preview.redd.it/real-madrids-newly-renovated-santiago-bernabeus-atmosphere-v0-NnBudTdrODdzNndjMdkd0DbjDzhiieK-5_dOPLPACvB6Q4cLr2aCIASyOHTA.png?format=pjpg&auto=webp&s=e2aee5ce507cb4b1cb99b512ba4ee06889d8ecc0"
@@ -264,7 +267,7 @@
   prices.forEach((price) => {
     const huf = parseInt(price.dataset.huf);
     if (currency === "EUR") {
-      const eur = Math.round(huf / eurRate);   // <<< EUR kerekítve
+      const eur = Math.round(huf / eurRate);  
       price.textContent = `${eur} €`;
     } else {
       price.textContent = `${huf.toLocaleString()} Ft`;
@@ -291,13 +294,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
