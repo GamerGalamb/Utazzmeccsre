@@ -1,190 +1,189 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UtazzMeccsre – Adatvédelmi tájékoztató</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-gray-50 text-gray-900">
-    <!-- Header logó + nav -->
-    <header class="bg-white shadow-md w-full">
-      <div
-        class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 px-6 py-4"
-      >
-        <a href="index.html" class="flex items-center">
-          <img
-            src="utazzmeccsre-logo.png"
-            alt="UtazzMeccsre logó"
-            class="h-16 w-auto"
-          />
-        </a>
-        <nav class="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-700">
-          <a href="index.html" class="hover:text-red-600">Főoldal</a>
-          <a href="aszf.html" class="hover:text-red-600">ÁSZF</a>
-          <a href="impresszum.html" class="hover:text-red-600">Impresszum</a>
-          <a href="adatvedelem.html" class="text-red-600">Adatvédelmi tájékoztató</a>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adatvédelmi tájékoztató – UtazzMeccsre</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      if (menu) menu.classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navigáció -->
+  <header class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center">
+        <img src="utazzmeccsre-logo.png" alt="UtazzMeccsre" class="h-20 w-auto">
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="space-x-4 hidden md:flex items-center text-sm font-medium text-gray-700">
+        <a href="index.html" class="hover:text-red-600">Főoldal</a>
+        <a href="turak.html" class="hover:text-red-600">Túrák</a>
+        <a href="index.html#why-us" class="hover:text-red-600">Miért minket?</a>
+        <a href="gyik.html" class="hover:text-red-600">GYIK</a>
+        <a href="rolunk.html" class="hover:text-red-600">Rólunk</a>
+        <a href="#contact" class="hover:text-red-600">Kapcsolat</a>
+        <span class="border-l h-5 border-gray-300 mx-1"></span>
+        <a href="aszf.html" class="hover:text-red-600">ÁSZF</a>
+        <a href="impresszum.html" class="hover:text-red-600">Impresszum</a>
+        <a href="adatvedelem.html" class="text-red-600">Adatvédelmi tájékoztató</a>
+      </nav>
+
+      <!-- Mobil hamburger -->
+      <button onclick="toggleMenu()" class="md:hidden text-gray-700 hover:text-red-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobil menü -->
+    <nav id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-md md:hidden">
+      <div class="flex flex-col items-center space-y-3 py-4 text-sm font-medium">
+        <a href="index.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Főoldal</a>
+        <a href="turak.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Túrák</a>
+        <a href="index.html#why-us" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Miért minket?</a>
+        <a href="gyik.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">GYIK</a>
+        <a href="rolunk.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Rólunk</a>
+        <a href="#contact" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Kapcsolat</a>
+        <a href="aszf.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">ÁSZF</a>
+        <a href="impresszum.html" onclick="toggleMenu()" class="text-gray-700 hover:text-red-600">Impresszum</a>
+        <a href="adatvedelem.html" onclick="toggleMenu()" class="text-red-600 font-semibold">Adatvédelmi tájékoztató</a>
       </div>
-    </header>
+    </nav>
+  </header>
 
-    <!-- Tartalom -->
-    <main class="container mx-auto px-6 py-10 max-w-4xl">
-      <div class="bg-white shadow-lg rounded-2xl p-8">
-        <h1 class="text-3xl font-bold mb-4 text-gray-800">
-          Adatvédelmi tájékoztató
-        </h1>
-        <p class="text-sm text-gray-500 mb-6">Utolsó frissítés: 2025</p>
+  <!-- Tartalom -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <div class="bg-white rounded-2xl shadow-lg p-8">
+      <h1 class="text-3xl font-extrabold mb-6 text-gray-800">Adatvédelmi tájékoztató</h1>
 
-        <section class="space-y-6 text-gray-800 text-sm md:text-base">
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              1. Az adatkezelő adatai
-            </h2>
-            <p><strong>Név:</strong> UtazzMeccsre</p>
-            <!-- Cím sor eltávolítva kérés szerint -->
-            <p>
-              <strong>E-mail:</strong>
-              <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
-                utazzmeccsre@gmail.com
-              </a>
-            </p>
-            <p>
-              Az adatkezelő a vonatkozó adatvédelmi szabályok szerint jár el
-              (GDPR – EU 2016/679).
-            </p>
-          </div>
+      <p class="text-sm text-gray-500 mb-6">
+        Utoljára frissítve: 2025
+      </p>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              2. Kezelt adatok köre
-            </h2>
-            <ul class="list-disc list-inside space-y-1">
-              <li>név</li>
-              <li>e-mail cím</li>
-              <li>telefonszám (opcionális)</li>
-              <li>utazással kapcsolatos információk (város, dátum, csomag)</li>
-              <li>az üzenetben megadott egyéb adatok</li>
-            </ul>
-          </div>
+      <div class="space-y-6 text-gray-800 text-sm md:text-base leading-relaxed">
+        <section>
+          <h2 class="font-semibold text-lg mb-2">1. Adatkezelő adatai</h2>
+          <p>
+            Adatkezelő: <strong>UtazzMeccsre</strong><br />
+            E-mail:
+            <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
+              utazzmeccsre@gmail.com
+            </a>
+          </p>
+        </section>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              3. Az adatkezelés célja
-            </h2>
-            <ul class="list-disc list-inside space-y-1">
-              <li>ajánlatkérések feldolgozása</li>
-              <li>utazási csomagok összeállítása</li>
-              <li>kapcsolattartás (e-mail, telefon)</li>
-              <li>számlázás és jogi kötelezettségek teljesítése</li>
-            </ul>
-          </div>
+        <section>
+          <h2 class="font-semibold text-lg mb-2">2. Az adatkezelés célja</h2>
+          <p>
+            Az adatkezelés célja, hogy az ajánlatkérést és a kapcsolattartást lehetővé tegyük, valamint
+            a megrendelt utazási szolgáltatásokat előkészítsük és teljesítsük.
+          </p>
+        </section>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              4. Az adatkezelés jogalapja
-            </h2>
-            <ul class="list-disc list-inside space-y-1">
-              <li>az érintett hozzájárulása (ajánlatkérés elküldése)</li>
-              <li>szerződés teljesítése</li>
-              <li>jogi kötelezettség teljesítése (számlázás)</li>
-            </ul>
-          </div>
+        <section>
+          <h2 class="font-semibold text-lg mb-2">3. Kezelt személyes adatok köre</h2>
+          <p>A weboldalon keresztül történő ajánlatkérés során az alábbi adatok kerülhetnek megadásra:</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>név</li>
+            <li>e-mail cím</li>
+            <li>telefonszám (ha megadod)</li>
+            <li>utazással kapcsolatos preferenciák (csapat, időpont, létszám)</li>
+            <li>egyéb, az ajánlatkérésben önkéntesen megadott információ</li>
+          </ul>
+        </section>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              5. Adatok továbbítása
-            </h2>
-            <p>Az adatok kizárólag az utazás teljesítéséhez szükséges mértékben kerülhetnek átadásra:</p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>légitársaságoknak</li>
-              <li>szállásadóknak</li>
-              <li>hivatalos jegyértékesítőknek</li>
-            </ul>
-            <p>Marketing célra harmadik fél részére adatot nem adunk át.</p>
-          </div>
+        <section>
+          <h2 class="font-semibold text-lg mb-2">4. Az adatkezelés jogalapja</h2>
+          <p>
+            Az adatkezelés jogalapja az érintett önkéntes hozzájárulása, valamint szerződéskötést
+            megelőző lépések megtétele és a szerződés teljesítése.
+          </p>
+        </section>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              6. Adatmegőrzési idő
-            </h2>
-            <ul class="list-disc list-inside space-y-1">
-              <li>ajánlatkérési adatok: 1 év</li>
-              <li>foglalás esetén szerződéses adatok: 8 év (adózási okokból)</li>
-            </ul>
-          </div>
+        <section>
+          <h2 class="font-semibold text-lg mb-2">5. Adatmegőrzési idő</h2>
+          <p>
+            Az adatokat az ajánlatkérés lezárásától, illetve a szerződés teljesítésétől számított
+            ésszerű ideig őrizzük meg, amelyet jogszabályi kötelezettségek is befolyásolhatnak
+            (pl. számviteli előírások).
+          </p>
+        </section>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              7. Az érintett jogai
-            </h2>
-            <p>Az érintett kérheti:</p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>hozzáférést a róla kezelt adatokhoz,</li>
-              <li>az adatok helyesbítését, törlését,</li>
-              <li>az adatkezelés korlátozását,</li>
-              <li>adatainak hordozását,</li>
-              <li>tiltakozhat az adatkezelés ellen.</li>
-            </ul>
-            <p>
-              Kérelmeit az
-              <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
-                utazzmeccsre@gmail.com
-              </a>
-              címre küldheti.
-            </p>
-          </div>
+        <section>
+          <h2 class="font-semibold text-lg mb-2">6. Adattovábbítás, adatfeldolgozás</h2>
+          <p>
+            Az utazás megszervezéséhez szükség lehet adat továbbítására légitársaságok, szállásadók vagy
+            jegyértékesítők felé. Ilyen esetekben kizárólag a feltétlenül szükséges adatokat adjuk át
+            (például név, születési dátum, elérhetőség).
+          </p>
+        </section>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              8. Cookie-k és technikai adatok
-            </h2>
-            <p>
-              A weboldal alapvető működéséhez technikai jellegű cookie-k használhatók.
-              Marketing vagy profilozó cookie-k jelenleg nincsenek beállítva.
-            </p>
-            <p>
-              A GitHub Pages szolgáltatás technikai naplóállományokat (pl. IP-cím, böngésző típusa)
-              rögzíthet, amelyekhez a Szolgáltató közvetlenül nem fér hozzá.
-            </p>
-          </div>
+        <section>
+          <h2 class="font-semibold text-lg mb-2">7. Érintetti jogok</h2>
+          <p>Az érintett kérelmezheti az Adatkezelőtől:</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>a róla kezelt személyes adatokhoz való hozzáférést,</li>
+            <li>az adatok helyesbítését vagy törlését,</li>
+            <li>az adatkezelés korlátozását,</li>
+            <li>adathordozhatóságot (amennyiben alkalmazható),</li>
+            <li>a hozzájárulás bármikori visszavonását (a visszavonás előtti adatkezelés jogszerű marad).</li>
+          </ul>
+          <p class="mt-2">
+            Kérelmét az
+            <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
+              utazzmeccsre@gmail.com
+            </a>
+            címen tudod elküldeni.
+          </p>
+        </section>
 
-          <div>
-            <h2 class="text-xl font-semibold mb-2 border-b pb-1">
-              9. Adatbiztonság
-            </h2>
-            <p>
-              A Szolgáltató minden ésszerű technikai és szervezési intézkedést megtesz annak érdekében,
-              hogy az adatok biztonságban legyenek, és illetéktelenek ne férhessenek hozzájuk.
-            </p>
-          </div>
+        <section>
+          <h2 class="font-semibold text-lg mb-2">8. Jogorvoslati lehetőségek</h2>
+          <p>
+            Amennyiben úgy érzed, hogy személyes adataid kezelése nem felel meg a vonatkozó előírásoknak,
+            panasszal élhetsz a területileg illetékes adatvédelmi hatóságnál. Emellett bírósághoz is
+            fordulhatsz jogaid érvényesítése érdekében.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-semibold text-lg mb-2">9. Kapcsolat</h2>
+          <p>
+            Adatvédelemmel kapcsolatos kérdés esetén az alábbi elérhetőségen állunk rendelkezésre:
+          </p>
+          <p class="mt-1">
+            E-mail:
+            <a href="mailto:utazzmeccsre@gmail.com" class="text-red-600 hover:underline">
+              utazzmeccsre@gmail.com
+            </a>
+          </p>
         </section>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Footer (cím nélkül) -->
-    <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
-      <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
-
-      <p class="text-sm">
-        Ha kérdésed van, írj nekünk:
-        <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">
-          utazzmeccsre@gmail.com
-        </a>
-      </p>
-
-      <div class="flex justify-center gap-6 mt-4 text-sm">
-        <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
-        <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
-        <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
-      </div>
-
-      <p class="text-xs text-gray-500 mt-4">
-        © 2025 UtazzMeccsre – Minden jog fenntartva.
-      </p>
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-gray-300 py-10 text-center mt-10">
+    <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
+    <p class="text-sm">
+      Ha kérdésed van, írj nekünk:
+      <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">utazzmeccsre@gmail.com</a>
+    </p>
+    <div class="flex justify-center gap-6 mt-4 text-sm">
+      <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
+      <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
+      <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">© 2025 UtazzMeccsre – Minden jog fenntartva.</p>
+  </footer>
+</body>
 </html>
