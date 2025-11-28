@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Franciaországi csapatok – UtazzMeccsre</title>
+  <title>Francia csapatok – UtazzMeccsre</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <script>
     function toggleMenu() {
       const menu = document.getElementById("mobile-menu");
-      if (menu) menu.classList.toggle("hidden");
+      if (menu) {
+        menu.classList.toggle("hidden");
+      }
     }
   </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
-
   <!-- Navigáció -->
   <header class="bg-white shadow-md w-full">
     <div class="container mx-auto flex items-center justify-between px-6 py-4">
@@ -35,7 +36,7 @@
       <button onclick="toggleMenu()" class="md:hidden focus:outline-none text-gray-700 hover:text-red-600 transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
+                d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
@@ -62,16 +63,37 @@
 
   <!-- Francia csapatok -->
   <section class="py-12 px-6 md:px-20">
-    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">Francia csapatok</h2>
+    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
+      Francia csapatok
+    </h2>
 
     <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-10">
-      <!-- PSG -->
+      <!-- Paris SG -->
       <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg"
-             alt="Paris Saint-Germain" class="w-24 h-24 mx-auto mb-4 object-contain" />
-        <h3 class="text-xl font-semibold mb-3">Paris Saint-Germain</h3>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png"
+          alt="Paris SG"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
+        <h3 class="text-xl font-semibold mb-3">Paris SG</h3>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Paris+Saint-Germain&entry.129531084=Franciaország"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Paris+SG&entry.129531084=Franciaország"
+          target="_blank"
+          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Ajánlatkérés
+        </a>
+      </div>
+
+      <!-- Paris FC -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Paris_FC_logo.svg/1012px-Paris_FC_logo.svg.png"
+          alt="Paris FC"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
+        <h3 class="text-xl font-semibold mb-3">Paris FC</h3>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Paris+FC&entry.129531084=Franciaország"
           target="_blank"
           class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
           Ajánlatkérés
@@ -80,11 +102,14 @@
 
       <!-- Marseille -->
       <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Olympique_Marseille_logo.svg"
-             alt="Olympique Marseille" class="w-24 h-24 mx-auto mb-4 object-contain" />
-        <h3 class="text-xl font-semibold mb-3">Olympique Marseille</h3>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympique_Marseille_logo.svg/927px-Olympique_Marseille_logo.svg.png"
+          alt="Marseille"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
+        <h3 class="text-xl font-semibold mb-3">Marseille</h3>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Olympique+Marseille&entry.129531084=Franciaország"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Marseille&entry.129531084=Franciaország"
           target="_blank"
           class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
           Ajánlatkérés
@@ -93,21 +118,27 @@
 
       <!-- Lyon -->
       <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/1/15/Olympique_Lyonnais.svg"
-             alt="Olympique Lyonnais" class="w-24 h-24 mx-auto mb-4 object-contain" />
-        <h3 class="text-xl font-semibold mb-3">Olympique Lyonnais</h3>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/1031px-Olympique_Lyonnais_logo.svg.png"
+          alt="Lyon"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
+        <h3 class="text-xl font-semibold mb-3">Lyon</h3>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Olympique+Lyonnais&entry.129531084=Franciaország"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Lyon&entry.129531084=Franciaország"
           target="_blank"
           class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
           Ajánlatkérés
         </a>
       </div>
 
-      <!-- Monaco -->
+      <!-- AS Monaco -->
       <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/AS_Monaco_FC.svg"
-             alt="AS Monaco" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/cf/LogoASMonacoFC2021.svg"
+          alt="AS Monaco"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
         <h3 class="text-xl font-semibold mb-3">AS Monaco</h3>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=AS+Monaco&entry.129531084=Franciaország"
@@ -119,8 +150,11 @@
 
       <!-- Lille -->
       <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/1/15/Lille_OSC_2018_logo.svg"
-             alt="Lille OSC" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Lille_OSC_2018_logo.svg/250px-Lille_OSC_2018_logo.svg.png"
+          alt="Lille"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
         <h3 class="text-xl font-semibold mb-3">Lille</h3>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Lille&entry.129531084=Franciaország"
@@ -132,8 +166,11 @@
 
       <!-- Nice -->
       <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/OGC_Nice_logo.svg"
-             alt="OGC Nice" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/OGC_Nice_logo.svg/973px-OGC_Nice_logo.svg.png"
+          alt="Nice"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
         <h3 class="text-xl font-semibold mb-3">Nice</h3>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Nice&entry.129531084=Franciaország"
@@ -143,26 +180,16 @@
         </a>
       </div>
 
-      <!-- Lens -->
+      <!-- RC Lens -->
       <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/RC_Lens_logo.svg"
-             alt="RC Lens" class="w-24 h-24 mx-auto mb-4 object-contain" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/RC_Lens_logo.svg/893px-RC_Lens_logo.svg.png"
+          alt="RC Lens"
+          class="w-24 h-24 mx-auto mb-4 object-contain"
+        />
         <h3 class="text-xl font-semibold mb-3">RC Lens</h3>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=RC+Lens&entry.129531084=Franciaország"
-          target="_blank"
-          class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
-          Ajánlatkérés
-        </a>
-      </div>
-
-      <!-- Rennes -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition transform hover:scale-105">
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Stade_Rennais_FC.svg"
-             alt="Stade Rennais" class="w-24 h-24 mx-auto mb-4 object-contain" />
-        <h3 class="text-xl font-semibold mb-3">Rennes</h3>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScptE-TZxzgDaz5kksXI3caEgGS-lsnd3UgLL2s8SK7S_qZIg/viewform?usp=pp_url&entry.103193037=Rennes&entry.129531084=Franciaország"
           target="_blank"
           class="bg-red-600 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
           Ajánlatkérés
@@ -176,14 +203,18 @@
     <p class="text-lg font-semibold mb-1">UtazzMeccsre</p>
     <p class="text-sm">
       Ha kérdésed van, írj nekünk:
-      <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">utazzmeccsre@gmail.com</a>
+      <a href="mailto:utazzmeccsre@gmail.com" class="text-red-500 hover:underline">
+        utazzmeccsre@gmail.com
+      </a>
     </p>
     <div class="flex justify-center gap-6 mt-4 text-sm">
       <a href="aszf.html" class="hover:text-white hover:underline">ÁSZF</a>
       <a href="impresszum.html" class="hover:text-white hover:underline">Impresszum</a>
       <a href="adatvedelem.html" class="hover:text-white hover:underline">Adatvédelmi tájékoztató</a>
     </div>
-    <p class="text-xs text-gray-500 mt-4">© 2025 UtazzMeccsre – Minden jog fenntartva.</p>
+    <p class="text-xs text-gray-500 mt-4">
+      © 2025 UtazzMeccsre – Minden jog fenntartva.
+    </p>
   </footer>
 </body>
 </html>
