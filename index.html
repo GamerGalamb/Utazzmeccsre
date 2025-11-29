@@ -434,5 +434,217 @@
       if (selectorMobile) selectorMobile.value = savedCurrency;
       updatePrices(savedCurrency);
     </script>
+    <!-- UtazzMeccsre – mini chatbot -->
+<div id="um-chatbot-toggle" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 14px; border-radius: 999px; background: #007bff; color: white; cursor: pointer; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; z-index: 9999;">
+  UtazzMeccsre – Kérdezz! 💬
+</div>
+
+<div id="um-chatbot-window" style="display: none; position: fixed; bottom: 70px; right: 20px; width: 340px; height: 440px; background: white; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; z-index: 9999; overflow: hidden;">
+  <div style="background: #007bff; color: white; padding: 10px 12px; font-weight: 600; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
+    <span>UtazzMeccsre asszisztens</span>
+    <button id="um-chatbot-close" style="border: none; background: transparent; color: white; font-size: 16px; cursor: pointer;">×</button>
+  </div>
+  <div id="um-chatbot-messages" style="padding: 10px; height: 340px; overflow-y: auto; font-size: 14px; background: #f7f7f7;">
+    <div style="margin-bottom: 8px;">
+      <strong>Bot:</strong> Szia! Én vagyok az UtazzMeccsre asszisztens. Tudok segíteni meccses utakkal kapcsolatban – csomagok, árak, foglalás, fizetés, egyedi városok és csapatok. 🙂
+    </div>
+  </div>
+  <div style="display: flex; border-top: 1px solid #ddd; background: white;">
+    <input id="um-chatbot-input" type="text" placeholder="Írd ide a kérdésed..." style="flex: 1; border: none; padding: 8px; font-size: 14px; outline: none;">
+    <button id="um-chatbot-send" style="border: none; background: #007bff; color: white; padding: 0 12px; font-size: 14px; cursor: pointer;">Küld</button>
+  </div>
+</div>
+
+<script>
+  const umToggle = document.getElementById('um-chatbot-toggle');
+  const umWindow = document.getElementById('um-chatbot-window');
+  const umClose = document.getElementById('um-chatbot-close');
+  const umMessages = document.getElementById('um-chatbot-messages');
+  const umInput = document.getElementById('um-chatbot-input');
+  const umSend = document.getElementById('um-chatbot-send');
+
+  umWindow.style.display = 'none';
+
+  umToggle.addEventListener('click', () => {
+    umWindow.style.display = (umWindow.style.display === 'none' || umWindow.style.display === '') ? 'block' : 'none';
+  });
+
+  umClose.addEventListener('click', () => {
+    umWindow.style.display = 'none';
+  });
+
+  function umAddMessage(sender, text) {
+    const div = document.createElement('div');
+    div.style.marginBottom = '8px';
+    div.innerHTML = `<strong>${sender}:</strong> ${text}`;
+    umMessages.appendChild(div);
+    umMessages.scrollTop = umMessages.scrollHeight;
+  }
+
+  function umBotReply(userText) {
+    const text = userText.toLowerCase();
+
+    // ==== Városok / csapatok – meccses utak ====
+    if (text.includes('barcelona') || text.includes('barca')) {
+      return 'Barcelona meccses útjaink tartalmazzák a repjegyet, szállást és hivatalos meccsjegyet a választott Barca-meccsre. Írd meg, mikor mennél, és kérj ajánlatot az űrlapon – személyre szabott árat küldünk. ⚽';
+    }
+    if (text.includes('madrid') || text.includes('real')) {
+      return 'Madridba Real Madrid meccsekre is szervezünk utakat. A csomagban repülőjegy, szállás és meccsjegy van, a pontos árat ajánlatkérés után tudjuk megadni.';
+    }
+    if (text.includes('milán') || text.includes('milano') || text.includes('inter') || text.includes('milan ')) {
+      return 'Milánóba Inter vagy AC Milan meccsekre tudunk csomagokat összeállítani. Repjegy + szállás + meccsjegy egyben, az aktuális árhoz kérj ajánlatot az oldalon.';
+    }
+    if (text.includes('róma') || text.includes('roma') || text.includes('lazio')) {
+      return 'Római meccses utak esetén is repjegy, szállás és hivatalos jegy van a csomagban. Jelezd, melyik csapat meccsére mennél, és milyen időpontban, és készítünk ajánlatot.';
+    }
+    if (text.includes('london') || text.includes('chelsea') || text.includes('arsenal') || text.includes('tottenham')) {
+      return 'Londonban több topcsapat meccsére is szervezünk utakat (pl. Chelsea, Arsenal, Tottenham). Írd meg, melyik csapat, kb. mikor, és ajánlatkérés után küldjük a pontos lehetőségeket és árakat.';
+    }
+    if (text.includes('liverpool')) {
+      return 'Liverpool-meccsre is tudunk csomagot szervezni. A csomag része a repülőjegy, szállás és hivatalos meccsjegy. A részletek miatt kérj ajánlatot az oldalon.';
+    }
+    if (text.includes('dortmund') || text.includes('bvb')) {
+      return 'Dortmundba is szervezünk meccses utakat. Ha érdekel egy BVB-meccs, írd meg az időpontot, és az ajánlatkérő űrlapon keresztül ajánlatot adunk.';
+    }
+    if (text.includes('manchester') || text.includes('man united') || text.includes('united') || text.includes('city')) {
+      return 'Manchesterbe is eljuthatsz velünk, legyen az United vagy City meccs. A csomag tartalmaz repjegyet, szállást és meccsjegyet. Kérj ajánlatot a honlapon, hogy pontos árat tudjunk adni.';
+
+    }
+
+    // ==== GYIK – csomag tartalma ====
+    if (
+      text.includes('mi van a csomagban') ||
+      text.includes('mit tartalmaz') ||
+      text.includes('benne van') ||
+      (text.includes('csomag') && (text.includes('tartalmaz') || text.includes('mi van')))
+    ) {
+      return 'A legtöbb UtazzMeccsre csomag tartalmazza a repjegyet oda-vissza, a szállást (általában reggelivel) és a hivatalos meccsjegyet. A pontos tartalom mindig az egyedi ajánlatban szerepel.';
+    }
+
+    // ==== GYIK – árak ====
+    if (
+      text.includes('ár') ||
+      text.includes('mennyibe kerül') ||
+      text.includes('ft') ||
+      text.includes('euró') ||
+      text.includes('euro') ||
+      text.includes('költség') ||
+      text.includes('árak')
+    ) {
+      return 'Az oldalon szereplő árak irányárak. A végleges ár függ az utazási dátumtól, a szabad helyektől és az egyedi igényeidtől. A legpontosabb árért töltsd ki az ajánlatkérő űrlapot, és személyre szabott ajánlatot küldünk. 🙂';
+    }
+
+    // ==== GYIK – foglalás menete ====
+    if (
+      text.includes('foglalás') ||
+      text.includes('foglalni szeretnék') ||
+      text.includes('hogy tudok foglalni') ||
+      text.includes('lefoglalni')
+    ) {
+      return 'Foglaláshoz először kérj ajánlatot az oldalon található űrlapon keresztül. Ezután e-mailben küldjük a pontos árat, a részleteket és a foglalási lépéseket.';
+    }
+
+    // ==== GYIK – ajánlat mennyi idő ====
+    if (
+      text.includes('mennyi idő') ||
+      text.includes('mikor kapok ajánlatot') ||
+      (text.includes('ajánlat') && text.includes('idő'))
+    ) {
+      return 'Általában néhány órán belül válaszolunk az ajánlatkérésre, de legkésőbb 24 órán belül mindenképp jelentkezünk.';
+    }
+
+    // ==== GYIK – szállás ====
+    if (
+      text.includes('szállás') ||
+      text.includes('hotel') ||
+      text.includes('szállod')
+    ) {
+      return 'Három- vagy négycsillagos, jól elhelyezkedő szállásokat használunk. A konkrét hotel nevét és részleteit az egyedi ajánlatban küldjük el.';
+    }
+
+    // ==== GYIK – elmarad a meccs ====
+    if (
+      text.includes('elmarad') ||
+      text.includes('meccset elhalasztják') ||
+      text.includes('halasztás') ||
+      (text.includes('meccs') && text.includes('elmarad'))
+    ) {
+      return 'Ha a meccset elhalasztják vagy módosítják, értesítünk, és segítünk az utazás módosításában is. A hivatalos jegyek jellemzően az új időpontra is érvényesek – a pontos részleteket mindig e-mailben egyeztetjük.';
+    }
+
+    // ==== GYIK – biztonság, megbízhatóság ====
+    if (
+      text.includes('biztonságos') ||
+      text.includes('megbízható') ||
+      text.includes('garancia')
+    ) {
+      return 'Hivatalos jegyértékesítő partnerekkel dolgozunk, és minden meccsjegy megbízható forrásból származik. Több sikeres utat és visszatérő utazót tudhatunk magunk mögött.';
+    }
+
+    // ==== GYIK – fizetés, előleg ====
+    if (
+      text.includes('előleg') ||
+      text.includes('fizetés') ||
+      text.includes('utalás') ||
+      text.includes('fizetni')
+    ) {
+      return 'Az előleg mértéke és a fizetés módja csomagtól függ. A részleteket az ajánlatban és a foglalási feltételekben küldjük el neked e-mailben.';
+    }
+
+    // ==== GYIK – egyedi ajánlat ====
+    if (
+      text.includes('egyedi ajánlat') ||
+      text.includes('egyedi') ||
+      text.includes('más dátum') ||
+      text.includes('másik város')
+    ) {
+      return 'Természetesen készítünk egyedi ajánlatot is. Írd meg, melyik város, melyik csapat és kb. milyen dátum érdekel, és az ajánlatkérő űrlapon keresztül elküldjük a személyre szabott lehetőségeket.';
+    }
+
+    // ==== GYIK – jegytípus, ülőhely ====
+    if (
+      text.includes('milyen jegy') ||
+      text.includes('jegytípus') ||
+      text.includes('ülőhely') ||
+      text.includes('hol ülök')
+    ) {
+      return 'Hivatalos meccsjegyeket biztosítunk, általában jó rálátást adó kategóriákba. A konkrét szektor és ülőhely az ajánlatban vagy a visszaigazolásban szerepel.';
+    }
+
+    // ==== GYIK – kapcsolat, elérhetőség ====
+    if (
+      text.includes('kapcsolat') ||
+      text.includes('elérhetőség') ||
+      text.includes('telefon') ||
+      text.includes('email') ||
+      text.includes('e-mail')
+    ) {
+      return 'Kérdés esetén írj nekünk bátran e-mailt: info@utazzmeccsre.hu. Igyekszünk minél gyorsabban válaszolni! 📩';
+    }
+
+    // ==== Alapértelmezett válasz ====
+    return 'Ezt a kérdést így nem teljesen értem. 😊 A legpontosabb választ úgy tudjuk adni, ha kitöltöd az ajánlatkérő űrlapot a honlapon, vagy írsz nekünk e-mailt: info@utazzmeccsre.hu.';
+  }
+
+  function umHandleSend() {
+    const text = umInput.value.trim();
+    if (!text) return;
+    umAddMessage('Te', text);
+    umInput.value = '';
+
+    setTimeout(() => {
+      const reply = umBotReply(text);
+      umAddMessage('Bot', reply);
+    }, 250);
+  }
+
+  umSend.addEventListener('click', umHandleSend);
+  umInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') umHandleSend();
+  });
+</script>
+<!-- /UtazzMeccsre – mini chatbot vége -->
+
   </body>
 </html>
+
